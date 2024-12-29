@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ETag</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <link rel="stylesheet" href="index.css">
+
+</head>
+
+<body class="bd" onload="checklog()">
+  </br>
+  <form class="titlebar">
+    <div class="d-flex flex-column text-align-center align-items-center">
+      
+      <div class="d-flex text-white">
+        <h2>WELCOME TO &nbsp;</h2>
+        <h2>E-TAG</h2>
+      </div>
+      <h4 class="text-white">your one better step to safety</h4>
+    </div>
+  </form>
+
+  <section id="home">
+    <br>
+    <form class="menu-container">
+      <table Width="100%">
+        <tr>
+          <td class="blank"></td>
+          <td class="user">
+            <a class="login" id="login" href="http://localhost/fproject/login.php">
+              <h3>login</h3>
+            </a>
+            <h5><label id="userd"></label></h5>
+          </td>
+          <td>
+            <div class="dropdown">
+              <button class="menu" onclick=""><img src="images/MENU.jpg" width="40px" height="40px"></button>
+              <div class="dropdown-content">
+                <a onclick="profile()">My Profile</a>
+                <a onclick="gqr()">Generate QR</a>
+                <a id="lgout" href="index.html">Logout</a>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </form>
+
+
+    <br>
+    <div class="sec3">
+      <div id="carouselExampleCaptions" class="carousel slide">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="images/slide1.jpg" class="d-block w-100" alt="..." height="400">
+            <div class="carousel-caption d-none d-md-block">
+              <p class="sub">To protect you and your loved ones</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="images/slide2.jpg" class="d-block w-100" alt="..." height="400">
+            <div class="carousel-caption d-none d-md-block">
+              <p class="sub">We are there for you when you need help</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="images/slide3.jpg" class="d-block w-100" alt="..." height="400">
+            <div class="carousel-caption d-none d-md-block">
+              <p class="sub">for you to be safe and sound from us to you and your family</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+    <BR>
+    <br>
+    <br>
+    <section
+      style="text-align: center; margin-left: 40px; margin-right: 25px; border: 2px; border-color: white; border-style: double;">
+
+      <table width="100%">
+        <tr>
+          <td width="60%">
+            <h1>ABOUT US</h1>
+            <br>
+            <p style="text-align: justify; font-size: small; padding-left: 4%; padding-right: 4%;">
+              According to a report by World Bank, <b><i>“There are 53 road accidents every hour and 1 death every four minutes in India”.</i></b> In most of those cases, victim don't have anyone known along with them. In such
+              situation, the family of the victim is also being notified only after the completion of identificaton
+              process which sometimes takes a lot more time depending on the seriousness of the victim's injuries.
+              <b>E-Tag</b> offers you and your loved once a helping hand during such emergencies.
+              <br><br>
+              <b>E-Tag</b> has been using best technologies that ensures speedy activity during emergencies. To find
+              solution to your problem is our main goal. Whereas technologies such as QR Code based Information
+              Retrieval, GPS Tracking and Location sharing, etc. are our handy tools to acieve it.
+            </p>
+          </td>
+          <td width="40%">
+            <img src="images/helpinghand.png" width="80%" title="helping hand">
+          </td>
+        </tr>
+      </table>
+    </section>
+
+  </section>
+
+
+  <section class="vh-100 gradient-custom" id="log">
+    <div class="container py-4 h-80">
+      <form style="text-align: right; margin-bottom: 0;" action="index.html" method="post">
+        <input type="submit" class="btn btn-primary" value="Back To Home">
+      </form>
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+          <div class="card bg-dark text-white" style="border-radius: 1rem;">
+            <div class="card-body p-4 text-center">
+
+              <h4 class="fw-bold mb-3 ">Welcome To E-TAG</h4>
+              <h4 class="fw-bold mb-3 text-uppercase" id="mc">Login</h4>
+              <form action="index.php" method="post" id="lgn">
+                <div class="form-outline form-white mb-2">
+                  <label class="form-label" for="typeEmailX">Email</label> <br>
+                  <input type="text" id="typeEmailX" class="form-control-sm" name="uname" />
+                </div>
+
+                <div class="form-outline form-white mb-2">
+                  <label class="form-label" for="typePasswordX">Password</label> <br>
+                  <input type="password" id="typePasswordX" class="form-control-sm" name="pass" />
+                </div>
+                <p class="small mb-3 pb-lg-2" id="fp"><a class="text-white-50" href="#">Forgot Password?</a></p>
+                <button class="btn btn-outline-light btn-lg" type="submit">Login</button>
+              </form>
+              <form action="signup.php" method="post" id="sup">
+                <div class="form-outline form-white mb-2">
+                  <label class="form-label" for="typeEmailX">Email</label> <br>
+                  <input type="text" id="typeEmailX" class="form-control-sm" name="sname" />
+                </div>
+
+                <div class="form-outline form-white mb-2">
+                  <label class="form-label" for="typePasswordX">Password</label> <br>
+                  <input type="password" id="typePasswordX" class="form-control-sm" name="spass" />
+                </div>
+
+                <div class="form-outline form-white mb-2">
+                  <label class="form-label" for="name">Full Name</label> <br>
+                  <input type="text" id="name" class="form-control-sm" name="name" />
+                </div>
+                <br>
+                <button class="btn btn-outline-light btn-lg" type="submit">SignUp</button>
+              </form>
+
+              <br>
+              <p class="mt-3" id="su">Don't have an account?<a onclick="signup()" class="text-white-50 fw-bold">Sign
+                  Up</a></p>
+              <p class="mt-3" id="lg">Go to login?<a onclick="signtolog()" class="text-white-50 fw-bold">Login</a></p>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <form class="card-container">
+    <div class="card" style="width: 100%; background-color:rgb(7, 129, 129)">
+
+      <!--<div class="card-body">
+        <ul class="list-group list-group-flush" style="width: 40%;">
+          <li class="list-group-item"></li>
+          <li class="list-group-item"></li>
+          <li class="list-group-item"></li>
+        </ul>
+        <p class="card-text"></p>
+      </div>-->
+    </div>
+  </form>
+
+  <script src="index.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
+    integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
+    integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
+    crossorigin="anonymous"></script>
+   <ul>
+    <div class="counter">
+  <a href="https://www.hitwebcounter.com" target="_blank">
+  <img src="https://hitwebcounter.com/counter/counter.php?page=12081473&style=0032&nbdigits=5&type=page&initCount=0" title="Counter Widget" Alt="Visit counter For Websites"   border="0" /></a>       
+    </div>
+   </ul>
+</body>
+
+</html>

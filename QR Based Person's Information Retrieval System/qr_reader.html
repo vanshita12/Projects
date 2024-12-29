@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate QR Code</title>
+    <!-- Include QR Code library from CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/qrcode@1.4.4/build/qrcode.min.js"></script>
+</head>
+<body>
+    <input type="text" id="qr-input" placeholder="Enter hash code">
+    <button onclick="generateQR()">Generate QR Code</button>
+    <br>
+    <canvas id="qr-code"></canvas>
+
+    <script>
+        function generateQR() {
+            // Get the hash code from the input field
+            var qrHash = document.getElementById("qr-input").value;
+            var qrCanvas = document.getElementById("qr-code");
+
+            if (qrHash) {
+                // Clear previous QR code if any
+                qrCanvas.innerHTML = "";
+
+                // Generate QR code
+                QRCode.toCanvas(qrCanvas, qrHash, function(error) {
+                    if (error) console.error(error);
+                    console.log('QR Code generated');
+                });
+            } else {
+                // Display message if no hash code is entered
+                console.error("Please enter a hash code");
+            }
+        }
+    </script>
+</body>
+</html>
